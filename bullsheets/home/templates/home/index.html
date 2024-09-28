@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <ul>
+            <li>
+            <a href="{% url 'vets:list_vets' %}" ><button class="btn btn-primary">Vets</button></a>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+{% endblock %}
