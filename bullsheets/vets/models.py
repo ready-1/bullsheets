@@ -24,7 +24,7 @@ class Vet(models.Model):
     
     def full_address(self):
         # TODO fix blank address2
-        return self.address1 + "/n " +self.address2 + "/n " + self.city + ", " + self.state + " " + self.zip
+        return self.address1 + "\n " +self.address2 + "\n " + self.city + ", " + self.state + " " + self.zip
     
     def __str__(self):
         return self.fname + " " + self.lname + " " + self.title + " " + self.practice_name
