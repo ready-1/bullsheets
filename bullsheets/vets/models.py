@@ -28,6 +28,9 @@ class Vet(models.Model):
     
     def __str__(self):
         return self.fname + " " + self.lname + " " + self.title + " " + self.practice_name
+        
+    def city_state_zip(self):
+        return self.city + ", " + self.state + " " + self.zip
     
 
     def __str__(self):

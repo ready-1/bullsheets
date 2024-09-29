@@ -2,5 +2,40 @@
 
 {% block title %}Vets{% endblock %}
 {% block content %}
-Vets List
+<div class="container">
+    <div class="row">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Practice Name</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vet in vets %}
+                <tr>
+                    <td>{{ vet.practice_name }}</td>
+                    <td>{{ vet.full_name }}</td>
+                    <td>{{ vet.email }}</td>
+                    <td>{{ vet.phone }}</td>
+                    <td><a href="{% url 'vets:vet_detail' vet.pk %}">View</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>  {% comment %} end row {% endcomment %}
+
+    <div class="row">
+        <ul class="nav mt-2">
+            <li>
+            <a href="{% url 'home:index' %}" ><button class="btn btn-primary">Home</button></a>
+            </li>
+        </ul>
+    </div>
+
+</div>
 {% endblock %}

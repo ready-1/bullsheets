@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Vet Detail{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1>{{ vet.full_name }}</h1>
+        <p>{{ vet.address1 }}</br>
+        {{ vet.address2 }}</br>
+        {{ vet.city_state_zip }}</p>
+        <p>{{ vet.email }}</p>
+        <p>{{ vet.phone }}</p>
+        <p>{{ vet.website }}</p>
+        <p>{{ vet.license }}</p>
+    </div>
+    <div class="row">
+        <a href="{% url 'vets:list_vets' %}"><span class="btn btn-primary">Back to Vets List</span></a>
+    </div>
+</div>
+{% endblock %}
