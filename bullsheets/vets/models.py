@@ -16,7 +16,10 @@ class Vet(models.Model):
     website = models.URLField(blank=True)
     license = models.CharField(max_length=64)
 
-    def name(self):
+
+
+
+    def full_name(self):
         return self.fname + " " + self.lname + " " + self.title
     
     def full_address(self):
@@ -28,4 +31,4 @@ class Vet(models.Model):
     
 
     def __str__(self):
-        return self.name
+        return self.full_name()
