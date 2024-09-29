@@ -43,9 +43,9 @@ def delete_vet(request, pk):
     return redirect("vets:list_vets")
 
 def create_10_vets(request):
-    for i in range(0, 10):
-        models.Vet.objects.create(fname="Vet " + str(i), 
-                                  lname="Vet " + str(i), 
+    for i in range(1, 11):
+        models.Vet.objects.create(fname="First " + str(i), 
+                                  lname="Last " + str(i), 
                                   practice_name="Practice " + str(i), 
                                   license="License " + str(i), 
                                   email="vet" + str(i) + "@example.com",
