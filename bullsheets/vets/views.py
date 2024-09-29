@@ -41,3 +41,20 @@ def edit_vet(request, pk):
 def delete_vet(request, pk):
     models.Vet.objects.get(pk=pk).delete()
     return redirect("vets:list_vets")
+
+def create_10_vets(request):
+    for i in range(0, 10):
+        models.Vet.objects.create(fname="Vet " + str(i), 
+                                  lname="Vet " + str(i), 
+                                  practice_name="Practice " + str(i), 
+                                  license="License " + str(i), 
+                                  email="vet" + str(i) + "@example.com",
+                                  phone="555-555-" + str(i),
+                                  title = "DVM",
+                                  address1="123 " + str(i) + " St",
+                                  address2="Suite " + str(i),
+                                  city="Mize",
+                                  state="MS",
+                                  zip="39116",
+                                  )
+    return redirect("vets:list_vets")

@@ -11,4 +11,5 @@ urlpatterns = [
     path("new_vet", vets.new_vet, name="new_vet"),
     path("edit_vet/<int:pk>", vets.edit_vet, name="edit_vet"),
     path("delete_vet/<int:pk>", vets.delete_vet, name="delete_vet"),
+    path("factory", vets.create_10_vets, name="vets_factory"),
 ]
